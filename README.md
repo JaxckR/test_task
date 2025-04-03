@@ -20,6 +20,9 @@
 ```console
 git clone https://github.com/JaxckR/test_task.git
 ```
+```console
+cd test_task
+```
 2. Установите все зависимости
 ```console
 pip install -r requirements.txt
@@ -27,7 +30,8 @@ pip install -r requirements.txt
 3. Перейдите в папку src, создайте и примените миграции
 ```console
 cd src
-python manage.py makemigrations
+```
+```console
 python manage.py migrate
 ```
 4. Запустите сервер
