@@ -9,13 +9,13 @@ RUN pip install --upgrade pip
 WORKDIR cafe/
 
 COPY requirements.txt .
-RUN pip install -r requirments.txt
+RUN pip install -r requirements.txt
 
 COPY . .
 
 RUN chmod -R 777 *
 
-WORKDIR cafe/src
+WORKDIR src/
 
 EXPOSE 8000
 
