@@ -1,0 +1,145 @@
+[
+{
+  "model": "cafe.order",
+  "pk": 1,
+  "fields": {
+    "table_number": 3,
+    "items": {
+      "Цезарь": "649",
+      "Кока-кола": "119.99",
+      "Карбонара": "899.99"
+    },
+    "total_price": 1668.98,
+    "status": "Оплачено",
+    "date_created": "2025-04-03T07:00:56.464Z",
+    "time_update": "2025-04-03T07:07:29.661Z"
+  }
+},
+{
+  "model": "cafe.order",
+  "pk": 2,
+  "fields": {
+    "table_number": 6,
+    "items": {
+      "Вода": "0",
+      "Чай": "99.99",
+      "Лимонад": "119.90",
+      "Кока-кола": "200"
+    },
+    "total_price": 419.89,
+    "status": "Готово",
+    "date_created": "2025-04-03T07:02:46.861Z",
+    "time_update": "2025-04-03T07:08:06.609Z"
+  }
+},
+{
+  "model": "cafe.order",
+  "pk": 3,
+  "fields": {
+    "table_number": 4,
+    "items": {
+      "Торт": "1190",
+      "Круассан": "89.90",
+      "Бутерброд": "199.90"
+    },
+    "total_price": 1479.8,
+    "status": "В ожидании",
+    "date_created": "2025-04-03T07:04:12.312Z",
+    "time_update": "2025-04-03T07:04:12.312Z"
+  }
+},
+{
+  "model": "cafe.order",
+  "pk": 4,
+  "fields": {
+    "table_number": 2,
+    "items": {
+      "Мидии": "400",
+      "Удон": "349",
+      "Суши": "499.19"
+    },
+    "total_price": 1248.19,
+    "status": "В ожидании",
+    "date_created": "2025-04-03T07:05:19.373Z",
+    "time_update": "2025-04-03T07:05:19.373Z"
+  }
+},
+{
+  "model": "cafe.order",
+  "pk": 5,
+  "fields": {
+    "table_number": 1,
+    "items": {
+      "Блины": "89.90",
+      "Чай": "199.90",
+      "Варенье": "200"
+    },
+    "total_price": 489.8,
+    "status": "В ожидании",
+    "date_created": "2025-04-03T07:05:48.628Z",
+    "time_update": "2025-04-03T07:05:48.628Z"
+  }
+},
+{
+  "model": "cafe.order",
+  "pk": 6,
+  "fields": {
+    "table_number": 5,
+    "items": {
+      "Жвачка": "19.90",
+      "Чупа-чупс": "9.89",
+      "Шоколад": "99"
+    },
+    "total_price": 128.79,
+    "status": "Оплачено",
+    "date_created": "2025-04-03T07:07:14.381Z",
+    "time_update": "2025-04-03T07:07:32.292Z"
+  }
+},
+{
+  "model": "cafe.order",
+  "pk": 7,
+  "fields": {
+    "table_number": 9,
+    "items": {
+      "Гречка": "110",
+      "Макароны": "200",
+      "Кисель": "90"
+    },
+    "total_price": 400.0,
+    "status": "В ожидании",
+    "date_created": "2025-04-03T07:09:06.889Z",
+    "time_update": "2025-04-03T07:09:06.889Z"
+  }
+},
+{
+  "model": "cafe.order",
+  "pk": 8,
+  "fields": {
+    "table_number": 11,
+    "items": {
+      "Пинаколада": "239",
+      "Чипсы": "110.10"
+    },
+    "total_price": 349.1,
+    "status": "В ожидании",
+    "date_created": "2025-04-03T07:10:06.605Z",
+    "time_update": "2025-04-03T07:10:06.605Z"
+  }
+},
+{
+  "model": "cafe.order",
+  "pk": 9,
+  "fields": {
+    "table_number": 19,
+    "items": {
+      "Чипсы": "119.90",
+      "Сухарики": "49"
+    },
+    "total_price": 168.9,
+    "status": "Оплачено",
+    "date_created": "2025-04-03T07:10:38.639Z",
+    "time_update": "2025-04-03T07:10:42.754Z"
+  }
+}
+]

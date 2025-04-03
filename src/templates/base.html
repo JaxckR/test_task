@@ -1,0 +1,58 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page_title }}</title>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+<header class="bg-secondary-subtle">
+    <div class="container">
+        <div class="row">
+            <h1 class="text-center"><a href="{% url 'home' %}">Тестовое задание</a></h1>
+            <form action="{% url 'search' %}" method="get" class="d-flex col-6 mx-auto">
+                <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Search" name="q">
+                <button class="btn btn-outline-success" type="submit">
+                    Поиск
+                </button>
+            </form>
+        </div>
+    </div>
+</header>
+
+<div class="d-flex justify-content-center mt-4">
+    <a href="{% url 'search' %}?q=ожидании" style="color: #fff"><button class="btn btn-primary">В ожидании</button></a>
+    <a href="{% url 'search' %}?q=готово" style="color: #fff"><button class="btn btn-primary mx-4">Готово</button></a>
+    <a href="{% url 'search' %}?q=оплачено" style="color: #fff"><button class="btn btn-primary">Оплачено</button></a>
+</div>
+<div class="d-flex justify-content-center mt-2">
+    <a href="{% url 'create' %}" style="color: #fff"><button class="btn btn-secondary">Добавить заказ</button></a>
+    <a href="{% url 'total' %}" style="color: #fff"><button class="btn btn-secondary ms-4">Общая выручка</button></a>
+</div>
+
+<main class="flex-grow-1">
+    <div class="container">
+            {% block content %}
+            {% endblock %}
+    </div>
+</main>
+
+
+<footer class="bg-secondary">
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+</body>
+</html>

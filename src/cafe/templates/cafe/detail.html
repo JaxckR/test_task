@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-6">
+        <h1 class="mb-3">ID: {{ order.id }}. Стол №{{ order.table_number }} - {{ order.status }}</h1>
+        Список блюд:
+        <ol>
+            {% for v, price in order.items.items %}
+            <li>{{ v }} - {{ price }}</li>
+            {% endfor %}
+        </ol>
+        Итого: {{ order.total_price }}
+    </div>
+</div>
+
+<div class="row justify-content-center mt-5">
+    <div class="col-6">
+        <form method="post" class="d-flex justify-content-center">
+            {% csrf_token %}
+            <div class="form-error">{{ form.non_fields_error }}</div>
+            {% for f in form %}
+            <div class="col-auto">
+                <label for="{{ f.id_for_label }}" class="col-form-label">{{ f.label }}</label>
+            </div>
+            <div class="col-auto ms-2">
+                {{ f }}
+            </div>
+            <div class="col-auto">
+                <div class="form-error">{{ f.errors }}</div>
+            </div>
+            {% endfor %}
+            <button type="submit" class="btn btn-primary ms-4">Подтвердить</button>
+        </form>
+        <form method="post" class="d-flex justify-content-center mt-3">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger" name="delete">Удалить</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

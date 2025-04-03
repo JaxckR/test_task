@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-4">
+        <h1>Создание заказа</h1>
+        <form method="post" class="mx-auto">
+        {% csrf_token %}
+        <div class="form-error">{{ form.non_fields_error }}</div>
+        {% for f in form %}
+        <div class="mb-3">
+            <label class="form_label" for="{{ f.id_for_label }}">{{ f.label }}</label><br>
+            {{ f }}
+            <div class="form-error">{{ f.errors }}</div>
+        </div>
+        {% endfor %}
+        <button type="submit" class="d-flex btn btn-primary mx-auto">Подтвердить</button>
+    </form>
+    </div>
+</div>
+{% endblock %}
